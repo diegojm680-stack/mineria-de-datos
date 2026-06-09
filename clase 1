@@ -1,0 +1,13 @@
+print("Bienvenido")
+Tipos de datos (primitivos):
+
+boolean: true, false
+int: 5, -7, 0
+float: 3.1416, -3.7
+char: "t","5","%"
+Tipos de datos (compuestos)
+
+string: "Diego"
+Tupla: ("yani","Enrique","victor","juan") (Constante)
+Lista: ["sarahi","victor","yani","juan"] (Variable)
+Diccionario {"elemento1":cuaderno,"elemento2":lapiz}
