@@ -1,0 +1,3 @@
+nombre = "Diego "
+edad = "23"
+print( " Bienvenido " + nombre + str(edad))
