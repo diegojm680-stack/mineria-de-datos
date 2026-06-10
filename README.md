@@ -16,8 +16,9 @@
 
 -[Actividad Print valores ](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%206)
 
--[Actividad Not](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actvidad%208)
--[]()
+-[Operadores Logicos](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actvidad%208)
+
+-[Variable Or ]()
 -[]()
 -[]()
 -[]()
