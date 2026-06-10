@@ -1,0 +1,15 @@
+eleccionTipoPizza = input("Bienvenido. Escoge una opción: Vegetariana (v) No vegetariana (nv) Salir (s)")
+if eleccionTipoPizza == "v":
+    eleccionIngrediente = input("Escoge una opción: Pimiento (p) Tofu (t)")
+    if eleccionIngrediente == "p":
+        print("Escogiste una pizza vegetariana con Pimiento, mozzarella y tomate.")
+    elif eleccionIngrediente == "t":
+        print("Escogiste una pizza vegetariana con Tofu, mozzarella y tomate.")
+elif eleccionTipoPizza == "nv":
+    eleccionIngrediente = input("Escoge una opción: Peperoni (p) Jamón (j) Salmón (s)")
+    if eleccionIngrediente == "p":
+        print("Escogiste una pizza no vegetariana con Peperoni, mozzarella y tomate.")
+    elif eleccionIngrediente == "j":
+        print("Escogiste una pizza no vegetariana con Jamón, mozzarella y tomate.")
+    elif eleccionIngrediente == "s":
+        print("Escogiste una pizza no vegetariana con Salmón, mozzarella y tomate.")
