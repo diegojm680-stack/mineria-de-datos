@@ -21,7 +21,10 @@
 -[9-Actividad](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2009)
 
 -[10-actividad](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2010)
--[]()
+
+-[11-Condicionales](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2011)
+
+
 -[]()
 -[]()
 -[]()
