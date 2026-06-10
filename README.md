@@ -9,7 +9,7 @@
 -[3-actividad](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%203)
 
 
--[4-Variables y Tipado](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%202)
+-[4-Variables y Tipado](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%204)
 
 -[-Variables](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%203)
 
