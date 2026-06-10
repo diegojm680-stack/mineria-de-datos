@@ -13,7 +13,7 @@
 
 -[5-Entrada de datos](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%205)
 
--[-Actividad Type , Str](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/type%20%2Cstr)
+-[6-Operadores Aritmeticos](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%206)
 
 -[-Actividad Boleano, int](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/clase%204)
 
