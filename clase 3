@@ -1,0 +1,3 @@
+audio = "amplificadores "
+int = "10 "
+print( "tenemos " + int + audio + "disponibles ")
