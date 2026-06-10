@@ -17,7 +17,7 @@
 
 -[7-Operadores Logicos](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actvidad%207)
 
--[]()
+-[8-Operadores Relacionales](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%208)
 
 -[9-Operadores relacionales](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2009)
 -[]()
