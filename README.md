@@ -20,7 +20,7 @@
 -[8-Operadores Relacionales](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%208)
 
 -[9-Actividad](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%209)
--[]()
+-[10-actividad](colab.research.google.com/drive/1-TGGMBOUpKrjjRQTYxSD5BCoI6BV2ZjS#scrollTo=7fS0hTHu-STX)
 -[]()
 -[]()
 -[]()
