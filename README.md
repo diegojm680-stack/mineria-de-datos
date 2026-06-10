@@ -13,15 +13,11 @@
 
 -[5-Entrada de datos](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%205)
 
--[6-Operadores Aritmeticos](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%206)
+-[6-Operadores Aritmeticos Imprimir](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%206)
 
--[-Actividad Boleano, int](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/clase%204)
+-[7-Operadores Logicos](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actvidad%207)
 
--[6-Actividad Float](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/trabajo%205)
-
--[7-Actividad Print valores ](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%206)
-
--[8-Operadores Logicos](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actvidad%208)
+-[]()
 
 -[9-Operadores relacionales](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2009)
 -[]()
