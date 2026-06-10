@@ -1,4 +1,0 @@
-nombre = "diego "
-carro = "carro"
-boolean = "true"
-print( "nuestro alumno " + nombre + "tiene " + carro  + boolean)
