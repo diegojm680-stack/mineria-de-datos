@@ -1,0 +1,6 @@
+alumnos = { "diego", 60, "veronica" , 4, "natalia"}
+print (alumnos)
+hermanos ={ "karina" , "ximena ", "daniela"}
+print(hermanos)
+hermanos.pop()
+print(hermanos)
