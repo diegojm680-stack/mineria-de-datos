@@ -6,10 +6,12 @@
 
 -[2-Type,str](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%202)
 
+-[3-actividad](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%203)
 
--[3-Variables y Tipado](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%202)
 
--[4-Variables](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%203)
+-[4-Variables y Tipado](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%202)
+
+-[-Variables](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%203)
 
 -[5-Actividad Type , Str](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/type%20%2Cstr)
 
