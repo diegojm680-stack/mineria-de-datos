@@ -4,7 +4,7 @@
 
 -[1-Bienvenida y tipo de datos.Py](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%201)
 
--[2-Actividad Type,str](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%202)
+-[2-Type,str](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%202)
 
 
 -[3-Variables y Tipado](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%202)
