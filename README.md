@@ -11,9 +11,9 @@
 
 -[4-Variables y Tipado](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%204)
 
--[-Variables](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%203)
+-[5-Entrada de datos](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%205)
 
--[5-Actividad Type , Str](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/type%20%2Cstr)
+-[-Actividad Type , Str](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/type%20%2Cstr)
 
 -[-Actividad Boleano, int](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/clase%204)
 
