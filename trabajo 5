@@ -1,0 +1,3 @@
+producto = "Coca cola "
+float ="25.589"
+print( "en el oxxo la " + producto + "cuesta "+ float)
