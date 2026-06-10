@@ -1,0 +1,11 @@
+hermanos = 1; #int 
+print("Yo tengo",hermanos,"hermanos.")
+
+estatura = 1.62 #float
+print("Mi estatura es de",estatura,"m.")
+
+esMayor = True #boolean
+print("¿La persona es mayor de edad?",esMayor)
+
+domicilio = "Av. Jesus del monte 29, huixquilucan" #string
+print("Vivo en",domicilio)
