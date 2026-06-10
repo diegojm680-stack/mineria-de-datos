@@ -1,3 +1,4 @@
-nombre ="Angel"
-edad = 29
-print("Bienvenido " + nombre)
+nombre = "diego "
+carro = "carro"
+boolean = "true"
+print( "nuestro alumno " + nombre + "tiene " + carro  + boolean)
