@@ -13,3 +13,7 @@ elif eleccionTipoPizza == "nv":
         print("Escogiste una pizza no vegetariana con Jamón, mozzarella y tomate.")
     elif eleccionIngrediente == "s":
         print("Escogiste una pizza no vegetariana con Salmón, mozzarella y tomate.")
+eleccionTipoPizza = "0"
+while eleccionTipoPizza != "s":
+  eleccionTipoPizza = input("Bienvenido. Escoge una opción: Vegetariana (v) No vegetariana (nv) Salir (s)")
+  print("Bloque repetido")
