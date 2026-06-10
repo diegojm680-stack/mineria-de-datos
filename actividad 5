@@ -1,4 +1,7 @@
-nombre = "Diego"
-edad = 23
-print(type(edad))
-print("Bienvenido " + nombre + " tu edad es " + str(edad))
+respuestaUsuario = input("¿Cuál es tu edad?")
+print(type(respuestaUsuario))
+
+respuestaUsuario = int(respuestaUsuario)
+
+print("La respuesta del usuario es:", respuestaUsuario)
+print(type(respuestaUsuario))
