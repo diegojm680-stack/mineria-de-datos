@@ -46,6 +46,6 @@
 
 -[22-Tupla](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2022)
 
--[23-Archivo.csv](
+-[23-Archivo.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2023)
 
--[24-Tupla]
+-[24-archivo.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2024)
