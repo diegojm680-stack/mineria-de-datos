@@ -1,24 +1,18 @@
 import csv
-archivo_csv = "calificaciones.csv"
-suma_promedios_grupo = 0
-total_alumnos = 0
-aprobados = 0
-reprobados = 0
-mejor_alumno = ""
-peor_alumno = ""
-mejor_promedio = -1
-peor_promedio = 101
-lista_alumnos = []
-try:
-    with open(archivo_csv, "r", encoding="utf-8") as archivo:
-        lector = csv.reader(archivo)
-        next(lector)
 
-        for fila in lector:
-            nombre = fila[1]
-            p1, p2, p3 = int(fila[3]), int(fila[4]), int(fila[5])
+with open("ventas.csv" , "r") as archivo:
+  lector = csv.reader(archivo)
+  for fila in lector:
+    print(fila)
+import csv
 
-            promedio_alumno = (p1 + p2 + p3) / 3
+total = 0
+with open("ventas.csv" , "r") as archivo:
+  lector = csv.DictReader(archivo)
 
-            suma_promedios_grupo += promedio_alumno
-            total_alumnos += 1
+  for fila in lector:
+    #print(fila)
+    cantidad = int(fila["Cantidad"])
+    precio = float(fila["Precio_Unitario"])
+    total += cantidad * precio
+print("Ventas totales:", total)
