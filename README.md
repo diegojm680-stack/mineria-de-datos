@@ -24,15 +24,28 @@
 
 -[11-Condicionales](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2011)
 
+-[12-Actividad](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2012)
 
--[]()
--[]()
--[]()
--[]()
--[]()
--[]()
+-[13-Actividad For](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2013)
 
+-[14-multiplicacion](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2013)
 
--[FizzBuzz](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/trabajo%201)
+-[15-Actividad](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2015)
 
--[variables](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/clase%202)
+-[16-While](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2016)
+
+-[17-Ciclo](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2017)
+
+-[18-Actividad](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2018)
+
+-[19-Fizz Buzz](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2019)
+
+-[20-Nm Primo](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2020)
+
+-[21-Lista](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2021)
+
+-[22-Tupla](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2022)
+
+-[23-Archivo.csv](
+
+-[24-Tupla]
