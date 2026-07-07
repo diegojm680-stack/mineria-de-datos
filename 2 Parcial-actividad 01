@@ -1,0 +1,44 @@
+#Trabajo en clase
+import pandas as pd
+datos = pd.read_csv("estudiantes.csv")
+#print(datos)
+#print(datos.head())
+#print(datos.columns)
+#print(datos.shape)
+promedio = datos["Calificacion_Final"].mean()
+mediana = datos["Calificacion_Final"].median()
+moda = datos["Calificacion_Final"].mode()[0]
+print(promedio,mediana,moda)
+
+print("Promedio:", datos["Calificacion_Final"].mean())
+print("Mediana:", datos["Calificacion_Final"].median())
+print("Moda:")
+print(datos["Calificacion_Final"].mode())
+
+
+
+#Actividad1 en clase
+import pandas as pd
+
+datos = pd.read_csv("estudiantes.csv")
+
+columnas = [
+    "Edad",
+    "Asistencia",
+    "Tareas",
+    "Examen",
+    "Horas_Estudio"
+]
+
+for columna in columnas:
+    print("\nVariable:", columna)
+    print("Promedio:", datos[columna].mean())
+    print("Mediana:", datos[columna].median())
+    print("Moda:")
+    print(datos[columna].mode())
+
+    print("Interpretación:")
+    print("El promedio de", columna, "es", datos[columna].mean())
+    print("La mediana es", datos[columna].median())
+    print("La(s) moda(s) es(son):")
+    print(datos[columna].mode())
