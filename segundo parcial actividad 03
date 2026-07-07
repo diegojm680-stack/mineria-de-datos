@@ -1,0 +1,22 @@
+#correlaciones
+import pandas as pd
+
+datos = pd.read_csv("estudiantes.csv")
+
+print("Matrícula:",
+      datos["Matricula"].corr(datos["Calificacion_Final"]))
+
+print("Edad:",
+      datos["Edad"].corr(datos["Calificacion_Final"]))
+
+print("Asistencia:",
+      datos["Asistencia"].corr(datos["Calificacion_Final"]))
+
+print("Tareas:",
+      datos["Tareas"].corr(datos["Calificacion_Final"]))
+
+print("Examen:",
+      datos["Examen"].corr(datos["Calificacion_Final"]))
+
+print("Horas de estudio:",
+      datos["Horas_Estudio"].corr(datos["Calificacion_Final"]))
