@@ -52,9 +52,9 @@
 
 -[01-medias de tendencia.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2024)
 
--[02-medidas de dispercion.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/segundo%20parcial%20actividad%2001)
+-[02-medidas de dispercion.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/segundo%20parcial%20actividad%2002)
 
--[03-Correlacion.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/segundo%20parcial%20actividad%2002)
+-[03-Correlacion.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/segundo%20parcial%20actividad%2003)
 
 -[04-Graficas.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/segundo%20parcial%20actividad%2004)
 
