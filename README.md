@@ -50,5 +50,13 @@
 
 -[24-archivo.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2024)
 
--![05-actividad.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/Captura%20de%20pantalla%202026-07-09%20072412.png)
+-[01-medias de tendencia.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2024)
+
+-[02-medidas de dispercion.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/segundo%20parcial%20actividad%2001)
+
+-[03-Correlacion.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/segundo%20parcial%20actividad%2002)
+
+-[04-Graficas.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/segundo%20parcial%20actividad%2004)
+
+-![05-Arbol.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/Captura%20de%20pantalla%202026-07-09%20072412.png)
 
