@@ -50,5 +50,5 @@
 
 -[24-archivo.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2024)
 
--[05-actividad.csv](!https://github.com/diegojm680-stack/mineria-de-datos/blob/main/Captura%20de%20pantalla%202026-07-09%20072412.png)
+-![05-actividad.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/Captura%20de%20pantalla%202026-07-09%20072412.png)
 
