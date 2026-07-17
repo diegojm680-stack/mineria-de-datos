@@ -58,5 +58,7 @@
 
 -[04-Graficas.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/segundo%20parcial%20actividad%2004)
 
--![05-Arbol.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/Captura%20de%20pantalla.png)
+-[05-Arbol.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/Captura%20de%20pantalla.png)
+
+-[06-Cuadro compartivo.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/Mineria_datos.jpeg)
 
