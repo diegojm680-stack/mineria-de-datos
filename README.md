@@ -62,3 +62,4 @@
 
 -[06-Cuadro compartivo.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/Mineria_datos.jpeg)
 
+-[07-Medidas de tendencia central y dispercion.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/segundo%20parcial%20actividad%2007)
