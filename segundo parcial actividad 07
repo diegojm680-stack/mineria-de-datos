@@ -1,0 +1,210 @@
+#Practica 7
+#Medidas de tendencia central y dispercion
+import pandas as pd
+
+df = pd.read_csv("dataset_sucursales_mensual.csv")
+
+datos_numericos = df.select_dtypes(include=['int64', 'float64'])
+
+print("MEDIA")
+print(datos_numericos.mean())
+
+print("\nMEDIANA")
+print(datos_numericos.median())
+
+print("\nMODA")
+print(datos_numericos.mode().iloc[0])
+
+
+print("VARIANZA")
+print(datos_numericos.var())
+
+print("\nDESVIACION ESTANDAR")
+print(datos_numericos.std())
+
+print("\nRANGO")
+print(datos_numericos.max() - datos_numericos.min())
+
+
+
+#Practica 7
+#Correlaciones
+
+cor_publicidad = df["Gasto_Publicidad"].corr(df["Ventas_Totales"])
+
+print("Correlación entre Publicidad y Ventas")
+print(cor_publicidad)
+
+cor_clientes = df["Clientes_Atendidos"].corr(df["Ventas_Totales"])
+
+print("Correlación entre Clientes Atendidos y Ventas")
+print(cor_clientes)
+
+cor_satisfaccion = df["Satisfaccion_Cliente"].corr(df["Ventas_Totales"])
+
+print("Correlación entre Satisfacción y Ventas")
+print(cor_satisfaccion)
+
+cor_descuento = df["Descuento_Promedio"].corr(df["Ventas_Totales"])
+
+print("Correlación entre Descuento y Ventas")
+print(cor_descuento)
+
+
+
+#Practica 7
+#Predecir con árbol de decisión, Naive Bayes y Regresión logística, Cumplio_Meta = Sí / No
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+df = pd.read_csv("dataset_sucursales_mensual.csv")
+df = df.dropna()
+
+df["Cumplio_Meta"] = df["Cumplio_Meta"].map({"Si": 1, "Sí": 1, "No": 0})
+
+X = df[[
+    "Numero_Empleados",
+    "Clientes_Atendidos",
+    "Visitas_Web",
+    "Gasto_Publicidad",
+    "Descuento_Promedio",
+    "Satisfaccion_Cliente",
+    "Ticket_Promedio",
+    "Devoluciones",
+    "Ventas_Totales"
+]]
+
+y = df["Cumplio_Meta"]
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+
+#Arbol de Deciciones
+arbol = DecisionTreeClassifier(random_state=42)
+
+arbol.fit(X_train, y_train)
+
+pred_arbol = arbol.predict(X_test)
+
+print("Árbol de Decisión")
+print("Exactitud:", accuracy_score(y_test, pred_arbol))
+
+nuevo = pd.DataFrame([{
+    "Numero_Empleados": 15,
+    "Clientes_Atendidos": 1200,
+    "Visitas_Web": 25000,
+    "Gasto_Publicidad": 18000,
+    "Descuento_Promedio": 5,
+    "Satisfaccion_Cliente": 4.5,
+    "Ticket_Promedio": 1450,
+    "Devoluciones": 12,
+    "Ventas_Totales": 850000
+}])
+
+print("Predicción:", arbol.predict(nuevo))
+
+
+# Naive Bayes
+
+naive = GaussianNB()
+
+naive.fit(X_train, y_train)
+
+pred_naive = naive.predict(X_test)
+
+print("\nNaive Bayes")
+print("Exactitud:", accuracy_score(y_test, pred_naive))
+
+print("Predicción:", naive.predict(nuevo))
+
+
+# Regresión Logística
+
+logistica = LogisticRegression(max_iter=1000)
+
+logistica.fit(X_train, y_train)
+
+pred_logistica = logistica.predict(X_test)
+
+print("\nRegresión Logística")
+print("Exactitud:", accuracy_score(y_test, pred_logistica))
+
+print("Predicción:", logistica.predict(nuevo))
+
+
+
+
+#Practica 7
+#Predecir con árbol de decisión, Naive Bayes y Regresión logística, Cumplio_Meta = Sí / No
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+df = pd.read_csv("dataset_sucursales_mensual.csv")
+df = df.dropna()
+
+df["Cumplio_Meta"] = df["Cumplio_Meta"].map({"Si": 1, "Sí": 1, "No": 0})
+
+X = df[[
+    "Numero_Empleados",
+    "Clientes_Atendidos",
+    "Visitas_Web",
+    "Gasto_Publicidad",
+    "Descuento_Promedio",
+    "Satisfaccion_Cliente",
+    "Ticket_Promedio",
+    "Devoluciones",
+    "Ventas_Totales"
+]]
+
+y = df["Cumplio_Meta"]
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Árbol de Decisión
+
+arbol = DecisionTreeClassifier(random_state=42)
+
+arbol.fit(X_train, y_train)
+
+pred_arbol = arbol.predict(X_test)
+
+print("Árbol de Decisión")
+print("Exactitud:", accuracy_score(y_test, pred_arbol))
+
+
+# Naive Bayes
+
+naive = GaussianNB()
+
+naive.fit(X_train, y_train)
+
+pred_naive = naive.predict(X_test)
+
+print("\nNaive Bayes")
+print("Exactitud:", accuracy_score(y_test, pred_naive))
+
+
+# Regresión Logística
+
+logistica = LogisticRegression(max_iter=1000)
+
+logistica.fit(X_train, y_train)
+
+pred_logistica = logistica.predict(X_test)
+
+print("\nRegresión Logística")
+print("Exactitud:", accuracy_score(y_test, pred_logistica))
