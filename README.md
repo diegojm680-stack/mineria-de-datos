@@ -70,4 +70,10 @@
 
 -[01-K-Means.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/tercer%20parcial%20actividad%2001)
 
+-[01-K-Means imagen.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/K-Means.png)
+
+
+
+
+
 
