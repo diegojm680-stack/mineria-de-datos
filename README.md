@@ -50,7 +50,7 @@
 
 -[24-archivo.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2024)
 
-##Segundo Parcial
+## Segundo Parcial
 
 -[01-medias de tendencia.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%2024)
 
@@ -66,7 +66,7 @@
 
 -[07-Medidas de tendencia central y dispercion.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/segundo%20parcial%20actividad%2007)
 
-##Tercer Parcial
+## Tercer Parcial
 
 -[01-K-Means.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/tercer%20parcial%20actividad%2001)
 
