@@ -68,5 +68,12 @@ Cluster
 2                 6.338028        7086.103803                 39.098592
 
 
+Interpretación:
+El modelo K-Means agrupa a los clientes en tres segmentos.
+Cluster 0 agrupa el menor numero de compras y gasto mensual pero mayor dia en el dia desde la ultima compra , muy poco frecuente 
+Cluster 1 con mayor numero en el gasto mensual y pocos dias desde la ultima compra , es mas constante 
+Cluster 2 Con compra mensual , gasto mensual y dias desde la ultima compra mayor , un nivel intermedio 
+
+
 
 
