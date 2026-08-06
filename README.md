@@ -72,7 +72,7 @@
 
 -[01-K-Means imagen.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/K-Means.png)
 
-
+-[02-Neurona Artificial.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/tercer%20parcial%20actividad%2002)
 
 
 
