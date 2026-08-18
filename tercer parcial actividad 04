@@ -1,0 +1,282 @@
+#Practica 4
+#Practica - Mineria de textos en redes sociales
+
+import pandas as pd
+import matplotlib.pyplot as plt
+from collections import Counter
+
+df = pd.read_csv("practica_mineria_textos_redes_sociales.csv")
+
+print("Primeras filas del dataset:")
+print(df.head())
+
+print("\nCantidad de registros:")
+print(len(df))
+
+df["Texto_Publicacion"] = df["Texto_Publicacion"].fillna("").astype(str)
+df["Hashtags"] = df["Hashtags"].fillna("").astype(str)
+df["Tema_Referencia"] = df["Tema_Referencia"].fillna("Sin tema")
+df["Sentimiento_Referencia"] = df["Sentimiento_Referencia"].fillna("neutral")
+
+texto_total = " ".join(df["Texto_Publicacion"]).lower()
+
+for signo in [".", ",", ";", ":", "!", "?", "¿", "¡", "(", ")", '"']:
+    texto_total = texto_total.replace(signo, "")
+
+palabras = texto_total.split()
+
+palabras_vacias = [
+    "el", "la", "los", "las", "de", "del", "y", "a", "e", "en",
+    "un", "una", "que", "fue", "con", "por", "para", "lo",
+    "se", "su", "es", "al", "como", "más", "pero", "muy",
+    "me", "mi", "nos", "no", "una", "este", "esta"
+]
+
+palabras_filtradas = [
+    palabra for palabra in palabras
+    if palabra not in palabras_vacias
+]
+
+conteo = Counter(palabras_filtradas)
+
+print("\nTop 10 palabras frecuentes:")
+print(conteo.most_common(10))
+
+positivas = [
+    "excelente", "buena", "bueno", "bien", "rápida", "rápido",
+    "claro", "clara", "fácil", "mejor", "mejora", "funciona",
+    "funcionando", "ordenada", "ordenado", "útil", "gracias",
+    "agradable", "correcto", "correcta", "genial"
+]
+
+negativas = [
+    "mala", "malo", "problema", "problemas", "falló", "fallo",
+    "lenta", "lento", "confuso", "confusa", "difícil",
+    "perdimos", "cerró", "cayó", "faltan", "falta",
+    "error", "errores", "deficiente", "incompleto", "incompleta", "complicado",
+    "complicada"
+]
+
+
+def analizar_sentimiento(texto):
+
+    texto = str(texto).lower()
+
+    for signo in [".", ",", ";", ":", "!", "?", "¿", "¡"]:
+        texto = texto.replace(signo, "")
+
+    palabras = texto.split()
+
+    puntos_pos = sum(palabra in positivas for palabra in palabras)
+    puntos_neg = sum(palabra in negativas for palabra in palabras)
+
+    if puntos_pos > puntos_neg:
+        return "positivo"
+    elif puntos_neg > puntos_pos:
+        return "negativo"
+    else:
+        return "neutral"
+
+
+df["Sentimiento_Calculado"] = df["Texto_Publicacion"].apply(
+    analizar_sentimiento
+)
+
+
+print("\nSentimientos calculados:")
+print(df[[
+    "Texto_Publicacion",
+    "Sentimiento_Calculado"
+]])
+
+print("\nCantidad de sentimientos calculados:")
+print(df["Sentimiento_Calculado"].value_counts())
+
+df["Sentimiento_Calculado"].value_counts().plot(
+    kind="bar"
+)
+
+plt.xlabel("Sentimiento")
+plt.ylabel("Cantidad")
+plt.title("Distribución de sentimientos calculados")
+plt.show()
+
+print("\nAnálisis por tema:")
+
+analisis_tema = pd.crosstab(
+    df["Tema_Referencia"],
+    df["Sentimiento_Calculado"]
+)
+
+print(analisis_tema)
+
+hashtags = []
+
+for texto in df["Hashtags"]:
+
+    palabras = str(texto).split()
+
+    for palabra in palabras:
+
+        palabra = palabra.strip()
+
+        if palabra.startswith("#"):
+            hashtags.append(palabra.lower())
+
+conteo_hashtags = Counter(hashtags)
+
+print("\nTop 10 hashtags:")
+print(conteo_hashtags.most_common(10))
+
+print("\nComparación entre sentimiento calculado y sentimiento de referencia:")
+
+comparacion = df[[
+    "Sentimiento_Referencia",
+    "Sentimiento_Calculado"
+]]
+
+print(comparacion)
+
+coincidencias = (
+    df["Sentimiento_Referencia"] ==
+    df["Sentimiento_Calculado"]
+)
+
+exactitud = coincidencias.mean()
+
+print("\nPorcentaje de coincidencia:")
+print(round(exactitud * 100, 2), "%")
+
+print("\nTabla de comparación:")
+print(
+    pd.crosstab(
+        df["Sentimiento_Referencia"],
+        df["Sentimiento_Calculado"]
+    )
+)
+
+# Interpretación
+print("\nInterpretación:")
+print("Conclusiones:")
+print("Se analizaron 143 publicaciones de diferentes redes sociales para conocer las opiniones y comentarios relacionados con la institución.")
+print("Las palabras más frecuentes fueron “estuvo”, “seguimiento”, “gracias”, “comparto” y “revisen”, lo que muestra que los usuarios realizan comentarios, sugerencias y solicitudes de atención sobre diferentes temas.")
+print("El sentimiento neutral fue el más frecuente, con 61 publicaciones, mientras que los sentimientos negativos 30 y positivos 52 publicaciones.")
+print("El análisis por tema mostró que clases y WiFi presentan una cantidad importante de comentarios negativos, mientras que eventos, plataforma y trámites presentan una mayor cantidad de comentarios positivos.")
+print("Los hashtags más utilizados fueron #utc y #campus, con 47 y 41 apariciones respectivamente, mostrando que son temas o etiquetas con una presencia importante en las publicaciones analizadas.")
+print("La clasificación simple de sentimientos obtuvo un 53.85% de coincidencia con el sentimiento de referencia. Esto indica que el método puede identificar algunas tendencias de sentimiento, pero tiene limitaciones porque se basa principalmente en palabras positivas y negativas y este no comprende completamente el contexto de las publicaciones.")
+
+print("Recomendaciones:")
+print("Dar seguimiento a los comentarios relacionados con WiFi y clases, ya que presentan una cantidad considerable de publicaciones negativas y pueden representar áreas donde los estudiantes tienen problemas o inconformidades.")
+print("Mantener y fortalecer las actividades que generan opiniones positivas, especialmente en temas relacionados con eventos, trámites y el funcionamiento de la plataforma.")
+print("Realizar periódicamente análisis de las publicaciones en redes sociales, utilizando las palabras frecuentes, hashtags y sentimientos para detectar problemas, conocer las opiniones de los estudiantes y tomar decisiones de mejora.")
+
+
+
+#Resultado
+
+Primeras filas del dataset:
+  ID_Publicacion       Fecha Red_Social Usuario_Anonimo Tipo_Publicacion  \
+0          P0001  2026-08-01     TikTok     usuario_037        respuesta   
+1          P0002  2026-08-04   Facebook     usuario_042        respuesta   
+2          P0003  2026-08-05    Threads     usuario_048            queja   
+3          P0004  2026-08-07     TikTok     usuario_009       comentario   
+4          P0005  2026-08-07          X     usuario_023           reseña   
+
+                                   Texto_Publicacion  \
+0  La plataforma se cerró justo cuando iba a envi...   
+1  El tema estuvo confuso y me perdí en el código...   
+2  La conexión se cayó varias veces y perdimos ti...   
+3  Faltan computadoras funcionando en el área de ...   
+4  La actualización de la plataforma se ve más or...   
+
+                       Hashtags  Likes  Comentarios  Compartidos  \
+0    #Clase #Tareas #Plataforma   91.0            9            1   
+1       #Python #MineriaDeDatos   58.0           35           19   
+2                  #Clases #UTC   91.0           24           16   
+3                       #Examen   74.0           21            1   
+4  #Soporte #Tareas #Clase #UTC   21.0            4            0   
+
+  Tema_Referencia Sentimiento_Referencia  
+0      plataforma               negativo  
+1          clases               negativo  
+2            wifi               negativo  
+3      biblioteca               negativo  
+4      plataforma               positivo  
+
+Cantidad de registros:
+143
+
+Top 10 palabras frecuentes:
+[('estuvo', 44), ('seguimiento', 27), ('gracias', 26), ('comparto', 26), ('revisen', 26), ('ojalá', 23), ('le', 23), ('den', 23), ('tomarlo', 22), ('cuenta', 22)]
+
+Sentimientos calculados:
+                                     Texto_Publicacion Sentimiento_Calculado
+0    La plataforma se cerró justo cuando iba a envi...              negativo
+1    El tema estuvo confuso y me perdí en el código...              negativo
+2    La conexión se cayó varias veces y perdimos ti...              negativo
+3    Faltan computadoras funcionando en el área de ...              positivo
+4    La actualización de la plataforma se ve más or...              positivo
+..                                                 ...                   ...
+138  La explicación del tema fue sencilla y pude te...               neutral
+139  El WiFi estuvo muy lento y no pude descargar e...              negativo
+140  Buena mejora en el WiFi, la clase en línea car...              positivo
+141  El pedido salió incompleto y no me dieron solu...              positivo
+142  El taller de tecnología estuvo excelente, apre...              positivo
+
+[143 rows x 2 columns]
+
+Cantidad de sentimientos calculados:
+Sentimiento_Calculado
+neutral     61
+positivo    52
+negativo    30
+Name: count, dtype: int64
+
+
+Análisis por tema:
+Sentimiento_Calculado  negativo  neutral  positivo
+Tema_Referencia                                   
+WiFi                          0        0         1
+biblioteca                    4       14         4
+cafeteria                     3       15         6
+clases                        9       12         5
+evento                        0        9        14
+plataforma                    4        0         7
+tramites                      1        6         9
+wifi                          9        5         6
+
+Top 10 hashtags:
+[('#utc', 47), ('#campus', 41), ('#clase', 18), ('#mineriadedatos', 16), ('#tecnologia', 16), ('#python', 14), ('#biblioteca', 14), ('#examen', 13), ('#practica', 13), ('#mejoracontinua', 13)]
+
+Comparación entre sentimiento calculado y sentimiento de referencia:
+    Sentimiento_Referencia Sentimiento_Calculado
+0                 negativo              negativo
+1                 negativo              negativo
+2                 negativo              negativo
+3                 negativo              positivo
+4                 positivo              positivo
+..                     ...                   ...
+138               positivo               neutral
+139               negativo              negativo
+140               positivo              positivo
+141               negativo              positivo
+142               positivo              positivo
+
+[143 rows x 2 columns]
+
+Porcentaje de coincidencia:
+53.85 %
+
+Tabla de comparación:
+Sentimiento_Calculado   negativo  neutral  positivo
+Sentimiento_Referencia                             
+Positivo                       0        0         1
+negativo                      27       19        10
+neutral                        3       18         9
+positivo                       0       24        32
+
+Interpretación:
+Conclusiones:
+Se analizaron 143 publicaciones de diferentes redes sociales para conocer las opiniones que tienen los usuarios sobre la institución. Los resultados muestran que la mayoría de los comentarios fueron neutrales con 61 publicaciones, seguidos de 52 positivos y 30 negativos.
+También se observó que los temas de clases y WiFi tienen más comentarios negativos, mientras que eventos, plataforma y trámites presentan más opiniones positivas. Los hashtags que más se utilizaron fueron #utc con 47 apariciones y #campus con 41.
+Por último, la clasificación de sentimientos obtuvo un 53.85% de coincidencia, lo que indica que puede ayudar a identificar si un comentario es positivo o negativo, aunque puede equivocarse porque no siempre logra entender el contexto completo de lo que escribe cada usuario.
