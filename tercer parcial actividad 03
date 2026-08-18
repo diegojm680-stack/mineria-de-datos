@@ -25,10 +25,10 @@ print(df.groupby("Sucursal")["Gasto_Mensual_MXN"].mean())
 
 print(df.groupby("Nivel_Consumo_Referencia")[[
     "Compras_Mensuales",
-        "Gasto_Mensual_MXN",
-            "Visitas_Web_Mensuales",
-                "Satisfaccion"
-                ]].mean())
+    "Gasto_Mensual_MXN",
+    "Visitas_Web_Mensuales",
+    "Satisfaccion"
+    ]].mean())
 
 
 
