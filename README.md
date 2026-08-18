@@ -74,6 +74,9 @@
 
 -[02-Neurona Artificial.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/tercer%20parcial%20actividad%2002)
 
+-[02-Neurona Artificial imagen.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/Proceso_aprednizaje.png)
+
+
 
 
 
