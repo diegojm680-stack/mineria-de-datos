@@ -1,0 +1,178 @@
+#Practica 3
+
+import pandas as pd
+
+df = pd.read_csv("dataset.csv")
+
+print(df.head())
+print(df.info())
+print(df.describe())
+
+print(df.isnull().sum())
+
+print("Duplicados:", df.duplicated().sum())
+
+print("Promedio de compras:")
+print(df["Compras_Mensuales"].mean())
+
+print("Promedio de gasto:")
+print(df["Gasto_Mensual_MXN"].mean())
+
+print("Promedio de satisfacción:")
+print(df["Satisfaccion"].mean())
+
+print(df.groupby("Sucursal")["Gasto_Mensual_MXN"].mean())
+
+print(df.groupby("Nivel_Consumo_Referencia")[[
+    "Compras_Mensuales",
+        "Gasto_Mensual_MXN",
+            "Visitas_Web_Mensuales",
+                "Satisfaccion"
+                ]].mean())
+
+
+#Resultado
+
+  ID_Cliente  Edad  Sucursal  Compras_Mensuales  Gasto_Mensual_MXN  \
+0      C0001    23  Satélite                  5            2834.90   
+1      C0002    58  Satélite                  9            7318.25   
+2      C0003    68     Toreo                  1            1389.41   
+3      C0004    43  Ecatepec                  0            2145.05   
+4      C0005    25  Ecatepec                  6            8882.04   
+
+   Visitas_Web_Mensuales  Dias_Desde_Ultima_Compra  Tiempo_Sesion_Min  \
+0                      7                      51.0                8.9   
+1                     12                      33.0                3.0   
+2                      0                     167.0                5.0   
+3                      1                      85.0                4.5   
+4                     16                      56.0                5.4   
+
+   Clicks_Promedio  Satisfaccion Categoria_Favorita   Canal_Origen  \
+0               11           3.1              Audio  Tienda física   
+1               18           3.4     Almacenamiento      App móvil   
+2               13           2.8          Monitores      Sitio web   
+3                1           2.0          Monitores      App móvil   
+4               16           3.3            Cómputo     Red social   
+
+         Fuente_Comentario                                         Comentario  \
+0  formulario_satisfaccion  El producto cumple aunque la entrega tardó un ...   
+1               reseña_web  Encontré lo que buscaba pero faltó más informa...   
+2                app_store  El producto no era lo que esperaba y el soport...   
+3               reseña_web  El producto no era lo que esperaba y el soport...   
+4             chat_soporte  Encontré lo que buscaba pero faltó más informa...   
+
+  Sentimiento_Referencia Nivel_Consumo_Referencia  
+0                neutral                    medio  
+1                neutral                    medio  
+2               negativo                     bajo  
+3               negativo                     bajo  
+4                neutral                    medio  
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 153 entries, 0 to 152
+Data columns (total 16 columns):
+ #   Column                    Non-Null Count  Dtype  
+---  ------                    --------------  -----  
+ 0   ID_Cliente                153 non-null    object 
+ 1   Edad                      153 non-null    int64  
+ 2   Sucursal                  153 non-null    object 
+ 3   Compras_Mensuales         153 non-null    int64  
+ 4   Gasto_Mensual_MXN         152 non-null    float64
+ 5   Visitas_Web_Mensuales     153 non-null    int64  
+ 6   Dias_Desde_Ultima_Compra  152 non-null    float64
+ 7   Tiempo_Sesion_Min         153 non-null    float64
+ 8   Clicks_Promedio           153 non-null    int64  
+ 9   Satisfaccion              152 non-null    float64
+ 10  Categoria_Favorita        152 non-null    object 
+ 11  Canal_Origen              152 non-null    object 
+ 12  Fuente_Comentario         153 non-null    object 
+ 13  Comentario                152 non-null    object 
+ 14  Sentimiento_Referencia    153 non-null    object 
+ 15  Nivel_Consumo_Referencia  153 non-null    object 
+dtypes: float64(4), int64(4), object(8)
+memory usage: 19.3+ KB
+None
+             Edad  Compras_Mensuales  Gasto_Mensual_MXN  \
+count  153.000000         153.000000         152.000000   
+mean    43.366013           6.712418        8279.153750   
+std     13.701110           4.341770        6483.118681   
+min     20.000000           0.000000         194.150000   
+25%     31.000000           3.000000        3324.350000   
+50%     44.000000           6.000000        6934.585000   
+75%     56.000000           9.000000       10111.340000   
+max     70.000000          18.000000       27959.230000   
+
+       Visitas_Web_Mensuales  Dias_Desde_Ultima_Compra  Tiempo_Sesion_Min  \
+count             153.000000                152.000000         153.000000   
+mean               16.869281                 53.046053           8.833333   
+std                10.978264                 47.361837           5.665407   
+min                 0.000000                  1.000000           0.700000   
+25%                 9.000000                 18.750000           4.600000   
+50%                15.000000                 40.000000           7.400000   
+75%                22.000000                 63.250000          11.600000   
+max                48.000000                180.000000          23.800000   
+
+       Clicks_Promedio  Satisfaccion  
+count       153.000000    152.000000  
+mean         25.418301      3.612500  
+std          17.964737      0.863944  
+min           0.000000      1.400000  
+25%          11.000000      3.200000  
+50%          22.000000      3.700000  
+75%          35.000000      4.300000  
+max          74.000000      5.000000  
+ID_Cliente                  0
+Edad                        0
+Sucursal                    0
+Compras_Mensuales           0
+Gasto_Mensual_MXN           1
+Visitas_Web_Mensuales       0
+Dias_Desde_Ultima_Compra    1
+Tiempo_Sesion_Min           0
+Clicks_Promedio             0
+Satisfaccion                1
+Categoria_Favorita          1
+Canal_Origen                1
+Fuente_Comentario           0
+Comentario                  1
+Sentimiento_Referencia      0
+Nivel_Consumo_Referencia    0
+dtype: int64
+Duplicados: 3
+Promedio de compras:
+6.712418300653595
+Promedio de gasto:
+8279.153750000001
+Promedio de satisfacción:
+3.6125000000000003
+Sucursal
+Centro       7033.955263
+Ecatepec     8167.372059
+Naucalpan    8025.794375
+Polanco      7657.535909
+Satélite     8974.942581
+Toreo        9066.461667
+Name: Gasto_Mensual_MXN, dtype: float64
+                          Compras_Mensuales  Gasto_Mensual_MXN  \
+Nivel_Consumo_Referencia                                         
+alto                              12.583333       17953.831714   
+bajo                               1.918919        1889.806757   
+medio                              6.287500        7001.555125   
+
+                          Visitas_Web_Mensuales  Satisfaccion  
+Nivel_Consumo_Referencia                                       
+alto                                  30.833333      4.544444  
+bajo                                   5.594595      2.377778  
+medio                                 15.800000      3.748750  
+
+
+
+#Preguntas
+| No. | Patrón encontrado                                                           | Evidencia numérica                            | Interpretación                                                                  | Decisión sugerida                                                       |
+| --- | --------------------------------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| 1   | Un mayor nivel de cliente está relacionado con un gasto mensual más elevado | Promedio de gasto superior al resto           | Este grupo genera mayores ingresos                                              | Crear promociones especiales para conservar a estos clientes            |
+| 2   | Los clientes clasificados como altos compran con mayor frecuencia           | Alto: 12.58; Medio: 6.29; Bajo: 1.92 compras  | La frecuencia de compra aumenta conforme al nivel del cliente                   | Desarrollar estrategias que premien las compras frecuentes              |
+| 3   | El grupo de nivel alto registra una mayor actividad en el sitio web         | Alto: 30.83; Medio: 15.80; Bajo: 5.59 visitas | Una mayor interacción digital puede relacionarse con más interés de compra      | Aprovechar el sitio web para mostrar ofertas dirigidas a estos clientes |
+| 4   | La satisfacción es mayor entre los clientes de nivel alto                   | Alto: 4.54; Medio: 3.75; Bajo: 2.38           | Una mejor experiencia del cliente se relaciona con un nivel de consumo más alto | Reforzar las acciones que generan una buena experiencia de compra       |
+| 5   | El segmento bajo muestra menor frecuencia de compra y actividad en línea    | 1.92 compras y 5.59 visitas promedio          | Estos clientes presentan menor interacción con el negocio                       | Crear incentivos para aumentar sus compras y visitas                    |
+| 6   | Toreo destaca como la sucursal con mayor gasto mensual promedio             | $9,066.46 promedio mensual                    | Esta sucursal obtiene mejores resultados en gasto por cliente                   | Identificar las prácticas de Toreo y aplicarlas en otras sucursales     |
+
