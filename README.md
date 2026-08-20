@@ -80,6 +80,6 @@
 
 -[04-actividad 04.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/tercer%20parcial%20actividad%2004)
 
--[04-actividad 04 imagen.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/actividad%204.png)
+-[04-actividad 04 imagen.csv](https://github.com/diegojm680-stack/mineria-de-datos/blob/main/calculados.png)
 
 
